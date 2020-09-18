@@ -1,5 +1,9 @@
 <template>
   <q-page class="q-ma-md">
+    <div class="row q-mb-lg">
+      <search />
+    </div>
+
     <no-tasks v-if="!Object.keys(tasksTodo).length"></no-tasks>
     <tasks-todo v-else :tasksTodo="tasksTodo" />
     <tasks-completed v-if="Object.keys(tasksCompleted).length" :tasksCompleted="tasksCompleted" />
@@ -31,6 +35,7 @@ export default {
     "tasks-completed": require("components/Tasks/Modals/TasksCompleted.vue")
       .default,
     "no-tasks": require("components/Tasks/Modals/NoTasks.vue").default,
+    search: require("components/Tasks/Tools/Search.vue").default,
   },
   mounted() {
     this.$root.$on("showAddTask", () => {
