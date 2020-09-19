@@ -1,5 +1,5 @@
 <template>
-  <q-input outlined v-model="searchField" label="SearchTest" class="col">
+  <q-input outlined v-model="searchField" label="Search" class="col">
     <template v-slot:append>
       <q-icon
         v-if="searchField !== ''"
