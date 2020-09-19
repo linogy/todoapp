@@ -1,5 +1,5 @@
 <template>
-  <q-input outlined v-model="searchField" label="Search" class="col">
+  <q-input outlined v-model="searchField" label="SearchTest" class="col">
     <template v-slot:append>
       <q-icon
         v-if="searchField !== ''"
@@ -24,14 +24,13 @@ export default {
       },
       set(value) {
         this.setSearch(value);
-      },
-    },
+      }
+    }
   },
   methods: {
-    ...mapActions("tasks", ["setSearch"]),
-  },
+    ...mapActions("tasks", ["setSearch"])
+  }
 };
 </script>
 
-<style>
-</style>
+<style></style>
